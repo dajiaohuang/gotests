@@ -21,7 +21,7 @@ The following shows `gotests` in action using the [official Sublime Text 3 plugi
 
 ## Installation
 
-__Minimum Go version:__ Go 1.22
+__Minimum Go version:__ Go 1.24
 
 Use [`go install`](https://pkg.go.dev/cmd/go#hdr-Compile_and_install_packages_and_dependencies) to install and update:
 ```sh
@@ -69,7 +69,7 @@ Available options:
 
   -template_params_file read external parameters to template by json with file
 
-  -template_params      read external parameters to template by json with stdin
+  -template_params      read external parameters to template from a JSON string argument
 
   -use_go_cmp           use cmp.Equal (google/go-cmp) instead of reflect.DeepEqual
 

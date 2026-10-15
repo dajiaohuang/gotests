@@ -39,7 +39,7 @@
 //
 //   -template_params_file read external parameters to template by json with file
 //
-//   -template_params      read external parameters to template by json with stdin
+//   -template_params      read external parameters to template from a JSON string argument
 package main
 
 import (
@@ -61,7 +61,7 @@ var (
 	templateDir        = flag.String("template_dir", "", `optional. Path to a directory containing custom test code templates. Takes precedence over -template. This can also be set via environment variable GOTESTS_TEMPLATE_DIR`)
 	template           = flag.String("template", "", `optional. Specify custom test code templates, e.g. testify. This can also be set via environment variable GOTESTS_TEMPLATE`)
 	templateParamsPath = flag.String("template_params_file", "", "read external parameters to template by json with file")
-	templateParams     = flag.String("template_params", "", "read external parameters to template by json with stdin")
+	templateParams     = flag.String("template_params", "", "read external parameters to template from a JSON string argument")
 	useGoCmp           = flag.Bool("use_go_cmp", false, "use cmp.Equal (google/go-cmp) instead of reflect.DeepEqual")
 	useAI              = flag.Bool("ai", false, "generate test cases using AI (requires Ollama)")
 	aiModel            = flag.String("ai-model", "qwen2.5-coder:0.5b", "AI model to use for test generation")

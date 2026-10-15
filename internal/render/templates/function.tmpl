@@ -110,7 +110,7 @@ func {{.TestName}}(t *testing.T) {
 				}
 				{{- if .TestResults}}
 				if tt.wantErr {
-					return
+					{{if .Subtests}}return{{else}}continue{{end}}
 				}
 				{{- end}}
 			{{- end}}
